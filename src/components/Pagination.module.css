@@ -1,0 +1,38 @@
+.pagination {
+ width: 100%;
+
+}
+
+.list {
+ list-style: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.item {
+  font-size: 1.5rem;
+ border-radius: 100%;
+ width: 50px;
+ height: 50px;
+ font-family: 'DM Serif Text';
+ border: 1px solid rgba(0, 0, 0, .2);
+ margin-right: 1.5rem;
+ background-color: #F0E7DB;
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+ transition: .3s ease-out;
+}
+
+.item.active {
+ background-color: #18181b;
+ color: #F0E7DB;
+}
+
+.item:hover {
+  color: #F0E7DB;
+ background-color: #18181b;
+}

@@ -1,0 +1,25 @@
+.button {
+ font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+border: none;
+background-color: transparent;
+color: #243261;
+cursor: pointer;
+ will-change: transform;
+padding: 0;
+}
+
+.button svg {
+
+ margin: 0;
+ padding: 0;
+ vertical-align: middle;
+ margin-left: .3rem;
+ transition: .2s ease-out;
+}
+
+.button:hover svg {
+ margin-left: .5rem;
+}

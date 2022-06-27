@@ -1,0 +1,21 @@
+.rating {
+ display: flex;
+ margin: 1.25rem 0;
+ align-items: center;
+}
+
+.rating svg {
+ width: 22px;
+ height: 22px;
+ margin-right: .5rem;
+}
+
+.review {
+font-family: 'DM Serif Text';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 48px;
+color: rgba(36, 50, 97, 0.64);
+margin-left: 1rem;
+}

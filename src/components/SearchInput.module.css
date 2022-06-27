@@ -1,0 +1,56 @@
+.search {
+ display: flex;
+ justify-content: flex-end;
+ position: relative;
+ height: 40px;
+}
+
+.search-box {
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ display: flex;
+ border-radius: 4px;
+ justify-content: space-between;
+ align-items: center;
+ transition: .45s cubic-bezier(.785,.135,.15,.86);
+}
+
+.search-box.active {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.input {
+ font-family: 'DM Serif Text';
+ border: none;
+ border-radius: 4px;
+ height: 100%;
+ background-color: transparent;
+ outline: none;
+ font-size: 1.1rem;
+ transition: .3s ease-in-out;
+ width: 0px;
+ transition: .45s cubic-bezier(.785,.135,.15,.86);
+}
+
+.input.active {
+ width: 300px;
+ padding: 0 .3rem;
+}
+
+
+
+
+.search-icon {
+  font-size: 1.5rem;
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding: .2rem .4rem .2rem .2rem;
+}

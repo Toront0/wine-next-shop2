@@ -1,0 +1,185 @@
+.header {
+ padding: .5rem 1.2rem;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 800;
+ width: 100%;
+ background-color: transparent;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+ color: #000;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #18181b;
+}
+
+.wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ z-index: 1000;
+}
+
+.menu-btn {
+cursor: pointer;
+border: none;
+background-color: transparent;
+ font-family: 'Bebas Neue';
+ font-size: 1.3rem;
+ overflow-y: hidden;
+ height: 25px;
+ padding-top: .3rem;
+  border-bottom: 1px solid #18181b;
+}
+
+.menu {
+  display: block;
+ line-height: 20px;
+ color: #04113F;
+ transition: .3s ease-out;
+
+}
+
+.menu.active {
+  color: #F0E7DB;
+}
+
+
+
+
+.logo {
+   font-family: 'Bebas Neue';
+ font-size: 1.375rem;
+text-align: center;
+letter-spacing: 0.02em;
+color: inherit;
+text-transform: uppercase;
+ transition: .3s ease-out;
+}
+
+.logo.active {
+  color: #F0E7DB;
+}
+
+.icons {
+ display: flex;
+ column-gap: .7rem;
+ align-items: center;
+
+}
+
+
+.icons button {
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+ font-size: 1.4rem;
+ color: #04113F;
+  transition: .3s ease-out;
+}
+
+.icons.active button {
+  color: #F0E7DB;
+}
+
+
+.user {
+ display: flex;
+ align-items: center;
+}
+
+.user h4 {
+  font-family: 'DM Serif Text', serif;
+ font-weight: 400;
+ margin-right: .3rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 900;
+  background-color: #18181b;
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  width: calc(70vw - 15px);
+  height: 100vh;
+
+}
+
+.links {
+  font-family: 'DM Serif Text', serif;
+  list-style: none;
+  padding-left: 5vw;
+ 
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #a6a5a4;
+  font-size: 4rem;
+  transition: .3s ease-out;
+}
+
+.link:hover {
+  color: #F0E7DB;
+}
+
+@media (max-width: 1274px) {
+  .nav {
+    width: 50vw;
+  }
+
+  .links {
+      padding-left: 10vw;
+  }
+
+  .backdrop {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 690px) {
+
+  .nav {
+    width: 100vw;
+  }
+  .backdrop {
+    display: none;
+  }
+  .link {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 567px) {
+  .logo {
+    display: none;
+  }
+}
+
+
+
+

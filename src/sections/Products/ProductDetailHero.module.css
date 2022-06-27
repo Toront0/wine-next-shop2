@@ -1,0 +1,302 @@
+.section {
+ background-color: #F0E7DB;
+ padding: 5rem 0;
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(582px, 1fr));
+ align-items: center;
+
+}
+
+.img-block {
+ position: relative;
+ width: 582px;
+ height: 100%;
+}
+
+.img-block:hover {
+  cursor: zoom-in
+}
+
+.text-block {
+ font-family: 'DM Serif Text';
+font-style: normal;
+color: #04113F;
+padding-left: 2rem;
+}
+
+.title {
+ font-weight: 400;
+font-size: 3rem;
+line-height: 48px;
+}
+
+.types {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ columns: 2;
+ column-gap: 1rem;
+}
+
+.types li {
+ font-weight: 400;
+font-size: 1.5rem;
+line-height: 48px;
+}
+
+.buttons {
+ display: flex;
+}
+
+
+.price {
+ display: inline-block;
+ font-weight: 400;
+font-size: 2.5rem;
+line-height: 48px;
+margin: 3.75rem 0 1.875rem;
+}
+
+.quantity {
+ width: 150px;
+ height: 50px;
+ border-radius: 4px;
+ border: 1px solid #243261;
+ margin-right: 6.75rem;
+}
+
+.form {
+ display: block;
+}
+
+.quantity-buttons {
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+
+.minus {
+ position: absolute;
+ width: 25%;
+ height: 100%;
+ left: 0;
+ top: 0;
+ border: none;
+ background-color: transparent;
+ border-right: 1px solid #000;
+ font-size: 1.5rem;
+ cursor: pointer;
+ transition: .2s ease-out;
+}
+.minus:hover {
+ background-color: #04113F;
+ color: #F0E7DB;
+}
+
+.plus {
+ position: absolute;
+ width: 25%;
+ height: 100%;
+ right: 0;
+ top: 0;
+ border: none;
+ background-color: transparent;
+ border-left: 1px solid #000;
+ font-size: 1.5rem;
+ cursor: pointer;
+ transition: .2s ease-out;
+}
+
+.plus:hover {
+ background-color: #04113F;
+ color: #F0E7DB;
+}
+
+
+
+
+.quantity-title {
+ display: inline-block;
+ position: absolute;
+ top: 0;
+ left: 45%;
+ width: 50%;
+ height: 100%;
+ font-weight: 400;
+font-size: 2rem;
+line-height: 48px;
+color: #000000;
+}
+
+.slider {
+  position: fixed;
+  z-index: 9000;
+  inset: 0;
+}
+
+
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 8500;
+  background-color: rgba(0, 0, 0, 0.9);
+  
+}
+
+
+.slide {
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8501;
+}
+
+.slide-img {
+  position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 582px;
+  height: 700px;
+}
+
+
+.count-slide {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  font-size: 1.6rem;
+  color: #fff;
+  z-index: 8503;
+}
+.close-btn {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 8503;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  z-index: 8502;
+  background-color: transparent;
+  font-size: 2.5rem;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.arrow-left {
+  top: 50%;
+  left: 1%;
+}
+
+.arrow-right {
+  top: 50%;
+  right: 1%;
+}
+
+.submit {
+   background-color: #04113F;
+ border-radius: 4px;
+ color: #F0E7DB;
+ padding: .5rem 1.5rem;
+ font-family: 'Bebas Neue';
+ font-size: 1.5rem;
+ line-height: 29px;
+ text-transform: uppercase;
+ color: #F0E7DB;
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ cursor: pointer;
+ transition: .3s ease;
+ border: 1px solid #04113F;
+}
+
+.submit:hover {
+color: #04113F;
+ background-color: #F0E7DB;
+}
+
+
+
+.arrow-left:disabled,
+.arrow-right:disabled {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 1226px) {
+ .img-block {
+  width: 100%;
+  height: 700px;
+ }
+
+ .text-block {
+  padding-left: 0;
+ }
+
+ .slide-img {
+  width: 482px;
+  height: 500px;
+}
+}
+
+@media (max-width: 612px) {
+ .wrapper {
+   grid-template-columns: 1fr;
+ }
+
+ .text-block {
+  width: 100%;
+ }
+
+ .slide-img {
+  width: 300px;
+  height: 500px;
+}
+
+  .img-block {
+  width: 300px;
+  height: 400px;
+ }
+
+ .title {
+  font-size: 2rem;
+  line-height: 32px;
+ }
+
+ .price {
+  font-size: 2.1rem;
+  margin: 2rem 0 1rem;
+ }
+
+ .types li {
+  font-size: 1rem;
+line-height: 38px;
+ }
+ .quantity {
+  margin-right: 2rem;
+ }
+
+ .buttons button {
+  font-size: 1.1rem;
+ }
+}

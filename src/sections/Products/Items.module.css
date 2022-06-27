@@ -1,0 +1,166 @@
+.section {
+ background-color: #F0E7DB;
+ padding: 5rem 0;
+ min-height: 70vh;
+}
+
+.wrapper {
+ display: flex;
+ flex-wrap: wrap;
+ column-gap: 1.2rem;
+ row-gap: 6rem;
+}
+
+
+
+.product {
+ position: relative;
+ border-radius: 4px;
+ border: 1px solid rgba(0, 0, 0, 0.2);
+ display: flex;
+ flex-direction: column;
+ flex: 0 1 448px;
+ max-height: 250px;
+ box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+ transition: .3s ease;
+ z-index: 50;
+ cursor: pointer;
+}
+
+.product:hover {
+ box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inner-wrapper {
+  display: flex;
+}
+
+.img {
+ position: relative;
+ width: 50%;
+ height: 250px;
+ top: -10%;
+ left: 2%;
+ 
+}
+
+.info {
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+justify-content: space-between;
+font-family: 'DM Serif Text';
+padding: 1rem 2rem 2.5rem 1.25rem;
+align-items: baseline;
+}
+
+.info h3 {
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 24px;
+color: #000000;
+}
+
+.color {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.details {
+   font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+border: none;
+background-color: transparent;
+color: #243261;
+cursor: pointer;
+ will-change: transform;
+padding: 0;
+}
+
+.price {
+display: inline-block;
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 27px;
+
+color: #111112;
+}
+
+.types {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.types li {
+ font-weight: 400;
+font-size: 1rem;
+line-height: 33px;
+color: #000000;
+}
+
+.info-head {
+  height: 60%;
+}
+
+
+.info button {
+ margin: 0;
+ padding: 0;
+}
+
+.heart {
+  position: absolute;
+  right: 5%;
+  bottom: 12%;
+  z-index: 100;
+ border: none;
+ background-color: transparent;
+ font-size: 1.6rem;
+ transition: .4s ease-out;
+ will-change: transform;
+}
+
+.heart.active path {
+   fill-rule: nonzero;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+.heart path {
+  transition: .3s ease-out;
+}
+
+.heart:hover path {
+  fill-rule: nonzero;
+}
+
+.no-match h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  
+}
+
+@media (max-width:1100px) {
+  .wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 482px) {
+  .info h3 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    margin: .75rem 0;
+  }
+}

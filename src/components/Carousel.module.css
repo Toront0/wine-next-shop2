@@ -1,0 +1,60 @@
+.main {
+ width: 500px;
+ height: 550px;
+ display: flex;
+ align-items: center;
+ position: relative;
+
+}
+
+.window {
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+}
+
+.all-pages {
+ height: 100%;
+ display: flex;
+ transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+}
+
+.button {
+ font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+width: 88px;
+height: 88px;
+border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.2);
+background-color: #F0E7DB;
+color: #000000;
+cursor: pointer;
+transition: .3s ease-out;
+}
+
+.button:hover {
+ background-color: #000;
+ color: #F0E7DB;
+}
+
+.button:disabled {
+  background-color: #000;
+  color: #F0E7DB;
+  cursor: not-allowed;
+}
+
+.prev {
+ position: absolute;
+ top: 20%;
+ left: -9%;
+ z-index: 100;
+}
+
+.next {
+ position: absolute;
+ top: 20%;
+ left: 89%;
+ z-index: 100;
+}

@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"products\\index.js -> ../../src/sections/Products/Items":{"id":"products\\index.js -> ../../src/sections/Products/Items","files":["static/chunks/src_sections_Products_Items_js.js"]}}
