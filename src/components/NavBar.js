@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './NavBar.module.css'
-import { AiOutlineUser, AiOutlineShopping } from 'react-icons/ai'
+import { AiOutlineShopping } from 'react-icons/ai'
 import { CgHeart } from 'react-icons/cg'
-import Modal from './Modal'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const NavBar = ({ color }) => {
  const [open, setOpen] = useState(false)
- const [modalOpen, setModalOpen] = useState(false)
  const [navFixed, setNavFixed] = useState(false) 
   
 
@@ -47,10 +45,6 @@ const NavBar = ({ color }) => {
       </Link>
       <div className={`${styles.icons} ${(navFixed || open || color) && styles.active}`}>
        <div className={styles.user}>
-        <button className='user-icon' onClick={() => setModalOpen(true)}>
-         <AiOutlineUser />
-        </button>
-        {modalOpen && <Modal setModalOpen={setModalOpen}/>}
         </div>
         <Link href='/wishlist' passHref>
           <button className={styles.heart}>
@@ -64,8 +58,8 @@ const NavBar = ({ color }) => {
         </Link>
       </div>
      </div>
-      {open &&<nav className={styles.nav} key='nav-modal'>
-          <div className={styles.backdrop} onClick={() => setOpen(false)}></div>
+      {open && <div>
+        <nav className={styles.nav} key='nav-modal'>
           <ul className={styles.links}>
             <li onClick={() => setOpen(false)}>
               <Link href='/'><a className={styles.link}>Home</a></Link>
@@ -80,7 +74,8 @@ const NavBar = ({ color }) => {
               <Link href='our-story'><a className={styles.link}>Our Story</a></Link>
             </li>
           </ul>
-        </nav>}
+        </nav>
+        <div className={styles.backdrop} onClick={() => setOpen(false)}></div></div>}
     </header>
   )
 }

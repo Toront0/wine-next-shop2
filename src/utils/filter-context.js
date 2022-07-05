@@ -86,12 +86,12 @@ const reducer = (state, action) => {
 
   if (text) {
     tempProducts = tempProducts.filter(p => {
-      return p.title.toLowerCase().startsWith(text)
+      return p.title.toLowerCase().startsWith(text.toLowerCase())
     })
   }
 
   if (category !== 'all') {
-    tempProducts = tempProducts.filter(p => p.type === category)
+    tempProducts = tempProducts.filter(p => p.category === category)
   }
 
   if (country !== 'all') {

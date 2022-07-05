@@ -3,9 +3,11 @@
  justify-content: flex-end;
  position: relative;
  height: 40px;
+
 }
 
 .search-box {
+
  border: 1px solid rgba(0, 0, 0, 0.1);
  display: flex;
  border-radius: 4px;
@@ -27,7 +29,6 @@
  background-color: transparent;
  outline: none;
  font-size: 1.1rem;
- transition: .3s ease-in-out;
  width: 0px;
  transition: .45s cubic-bezier(.785,.135,.15,.86);
 }
@@ -36,8 +37,6 @@
  width: 300px;
  padding: 0 .3rem;
 }
-
-
 
 
 .search-icon {
@@ -53,4 +52,10 @@
  align-items: center;
  text-align: center;
  padding: .2rem .4rem .2rem .2rem;
+}
+
+@media (max-width: 660px) {
+  .search {
+    width: 100%;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import styles from './ProductDetailHero.module.css'
 import Image from 'next/image'
 import ProductRating from '../../components/ProductRating'
@@ -60,12 +60,12 @@ const ProductDetailHero = ({ item }) => {
        <Image src={item.imgs[0]} alt='Wine' layout='fill' objectFit='contain'  />
       </div>
       <div className={styles['text-block']}>
-       <h2 className={styles.title}>{item.title || 'Some title'}</h2>
+       <h2 className={styles.title}>{item.title}</h2>
         <ProductRating />
         <ul className={styles.types}>
-         <li>Category: {item.type}</li>
-         <li>Taste:	dry</li>
-         <li>Vintage:	2020</li>
+         <li>Category: {item.category}</li>
+         <li>Taste:	{item.taste}</li>
+         <li>Vintage:	{item.year}</li>
          <li>Country:	{item.country}</li>
          <li>Region:	Vinho Verde (PT)</li>
          <li>Bottle size in L:	0.75</li>

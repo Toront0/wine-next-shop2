@@ -1,21 +1,23 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 
 
-
+const getLocalStorage = () => {
+  if (typeof window !== 'undefined') {
+    return JSON.parse(localStorage.getItem('wishlist'))
+  } else {
+    return []
+  }
+}
 
 const initialState = {
- items: []
+ items: getLocalStorage() || []
 }
 
 const reducer = (state, action) => {
 
-
-
-
  if (action.type === 'ADD') {
    const existingItemIndex = state.items.findIndex(i => i.id === action.payload.id)
  const existingItem = state.items[existingItemIndex]
-  let tempProducts = []
 
   if (!existingItem) {
     const updatedItems = state.items.concat(action.payload)
@@ -70,6 +72,10 @@ const WishListProvider = ({ children }) => {
   addItemToWishlist: addItemToWishlist,
   removeItemFromWishList: removeItemFromWishList
  }
+
+ useEffect(() => {
+  localStorage.setItem('wishlist', JSON.stringify(state.items))
+ }, [state.items])
 
 
  return <WishlistContext.Provider value={contextValue}>{children}</WishlistContext.Provider>

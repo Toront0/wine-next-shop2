@@ -29,6 +29,19 @@ text-transform: uppercase;
 color: #F0E7DB;
 }
 
+@media (max-width: 528px) {
+  .section {
+  height: 350px;
+  position: relative;
+}
+
+  .title {
+    font-size: 1.1rem;
+    line-height: 28px;
+    width: 85%;
+  }
+}
+
 
 
 

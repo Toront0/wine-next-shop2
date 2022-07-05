@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styles from './ProductFilter.module.css'
 import { BsFilterLeft } from 'react-icons/bs'
 import SearchInput from '../../components/SearchInput'
@@ -6,20 +6,39 @@ import { useFilterContext } from '../../utils/filter-context'
 import { getUniqueValues } from '../../utils/helpers'
 import { MdClose } from 'react-icons/md'
 
-const ProductFilter = ({ setSearchValue }) => {
+const ProductFilter = () => {
  const { sort, updateSort, all_products, filtered_products,  filters: {country, category, year, min_price, price, max_price}, updateFilters, clearFilters } = useFilterContext()
  const [active, setActive] = useState(false) 
+ let menuRef = useRef() 
 
- const categories = getUniqueValues(all_products, 'type')
+ const categories = getUniqueValues(all_products, 'category')
  const years = getUniqueValues(all_products, 'year')
  const countries = getUniqueValues(all_products, 'country')
+
+ useEffect(() => {
+
+  const closeDropdown = e => {
+    if (!menuRef?.current?.contains(e.target)) {
+      setActive(false)
+    }
+  }
+  
+
+  document.addEventListener('mousedown', closeDropdown)
+  return () => {
+    document.removeEventListener('mousedown', closeDropdown);
+  };
+ }, []) 
+
+
   return (
     <div className={styles.main}>
      <div className={`${styles.wrapper} lg-container`}>
       <h3 className={styles.title}>Products <span className={styles.quantity}>({filtered_products.length})</span> </h3>
-      <div className={styles.filter}>
-       <div className={styles.btns}>
-        <button className={styles['filter-icon']} onClick={() => setActive(prev => !prev)}><BsFilterLeft /></button>
+      <div className={styles['wrapper-inner']}>
+        <div className={styles.filter}>
+       <div className={styles.btns}  ref={menuRef}>
+        <button type='button' className={styles['filter-icon']} onClick={() => setActive((isActive) => !isActive)}><BsFilterLeft /></button>
         {active && <div className={styles['filter-wrapper']}>
         <div className={styles.categories}>
           <div className={styles['category-head']}>
@@ -62,17 +81,19 @@ const ProductFilter = ({ setSearchValue }) => {
         </div>
         </div>}
        </div>
-       <div className={styles['additional-filter']}>
-        <label htmlFor='sort' className={styles.label}>Sort by:</label>
+         <div className={styles.sort}>
+           <label htmlFor='sort' className={styles.label}>Sort by:</label>
         <select name="sort" id="sort" className={styles.select} value={sort} onChange={updateSort} >
           <option value="price-lowest">Price (lowest)</option>
           <option value="price-highest">Price (highest)</option>
           <option value="name-a">Name (A-Z)</option>
           <option value="name-z">Name (Z-A)</option>
         </select>
-        <SearchInput/>
-       </div>
+         </div>
+            <SearchInput/>
       </div>
+      
+     </div>
      </div>
     </div>
   )

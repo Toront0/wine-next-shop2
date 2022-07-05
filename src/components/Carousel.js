@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Children, cloneElement } from 'react'
 import styles from './Carousel.module.css'
-import { IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 
 const PAGE_WIDTH = 490
 

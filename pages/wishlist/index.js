@@ -1,12 +1,15 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import NavBar from '../../src/components/NavBar'
-import ListItems from '../../src/sections/Wishlist/ListItems'
+import styles from '../../styles/pages/Wishlist.module.css'
+
+const ListItems = dynamic(() => import('../../src/sections/Wishlist/ListItems'), { ssr: false })
 
 const index = () => {
   return (
     <>
      <NavBar />
-     <main>
+     <main className={styles.wishlist}>
       <ListItems />
      </main>
     </>

@@ -26,7 +26,7 @@ const Products = () => {
       <div className={`${styles.wrapper} lg-container`}>
         {filtered_products.map((product, i) => {
           const existInWishlist = items.find(item => item.id === product.id)
-        return <Item  key={product.id} id={product.id} existInWishlist={existInWishlist} price={product.price} title={product.title} imgs={product.imgs} addItemToWishlist={addItemToWishlist} slug={product.slug} category={product.type} />
+        return <Item  key={product.id} id={product.id} existInWishlist={existInWishlist} price={product.price} title={product.title} imgs={product.imgs} addItemToWishlist={addItemToWishlist} slug={product.slug} category={product.category} />
       })}
         {filtered_products.length === 0 && <div className={styles['no-match']}>
           <h3>No matches to your search, sorry</h3>
@@ -49,13 +49,13 @@ const Item = ({ slug, id, title, imgs, price, category, existInWishlist, addItem
       <div className={styles.info}>
         <div className={styles['info-head']}>
           <h3>{title}</h3>
-          <span className={styles.color}>Color: {category}</span>
+          <span className={styles.color}>Type: {category}</span>
         </div>
         <span className={styles.price}>€{price.toFixed(2)}</span>
       </div>
       </div>
     </Link> 
-      <button className={`${styles.heart} ${existInWishlist && styles.active}`} onClick={() => addItemToWishlist({ id: id, title: title, price: price, img: imgs[0] })} type='button' >
+      <button className={`${styles.heart} ${existInWishlist && styles.active}`} onClick={() => addItemToWishlist({ id: id, title: title, price: price, img: imgs[0], slug: slug })} type='button' >
         <CgHeart />
       </button>
   </div>

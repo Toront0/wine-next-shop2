@@ -12,27 +12,31 @@ font-style: italic;
 color: #000000;
 }
 
+.wrapper-inner {
+ border-top: 1px solid rgba(0, 0, 0, 0.2);
+ border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+ padding: .5rem 0;
+ margin-top: 1rem;
+}
+
 .quantity {
  font-size: 1.1rem;
  font-weight: normal;
 }
 
 .filter {
- border-top: 1px solid rgba(0, 0, 0, 0.2);
- border-bottom: 1px solid rgba(0, 0, 0, 0.2);
- padding: .5rem 0;
- margin-top: 1rem;
  display: flex;
  align-items: center;
  justify-content: space-between;
+ flex-wrap: wrap;
 }
 
 
 
 
-.additional-filter {
- display: flex;
- align-items: center;
+
+.sort {
+  margin-left: auto;
 }
 
 .label {
@@ -53,6 +57,7 @@ color: #000000;
 .select option {
  background-color: #F0E7DB;
 }
+
 
 .btns button {
   background-color: transparent;
@@ -78,9 +83,9 @@ color: #000000;
 .filter-wrapper {
   background-color: #18181b;
   position: absolute;
-    top: 100%;
+  top: 100%;
   left: 0;
-  width: 300px;
+  width: max(50%, 300px);
   z-index: 100;
   border-radius: 4px;
   color: #F0E7DB;
@@ -155,7 +160,7 @@ border-bottom: none;
 .filter-years {
   list-style: none;
   padding: 0;
-  columns: 3;
+  columns: 2;
   
 }
 

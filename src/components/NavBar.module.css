@@ -121,30 +121,55 @@ text-transform: uppercase;
   right: 0;
   bottom: 0;
   background-color: transparent;
-  width: calc(70vw - 15px);
+  width: 100vw;
   height: 100vh;
-
+  z-index: 850;
 }
 
 .links {
   font-family: 'DM Serif Text', serif;
   list-style: none;
   padding-left: 5vw;
- 
+  position: relative;
+  z-index: 855;
+}
+
+.address {
+  color: #fff;
 }
 
 .link {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  padding: 10px 0;
   color: #a6a5a4;
   font-size: 4rem;
   transition: .3s ease-out;
+  margin-bottom: 1rem;
+  transition: 0.45s cubic-bezier(.785,.135,.15,.86);
 }
 
-.link:hover {
-  color: #F0E7DB;
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s cubic-bezier(.785,.135,.15,.86);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+      color: #fff;
+  }
+
+  .link:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1274px) {

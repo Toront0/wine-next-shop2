@@ -1,5 +1,20 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import { toast } from "react-hot-toast";
+
+
+const getLocalStorage = () => {
+  if (typeof window !== 'undefined') {
+    return JSON.parse(localStorage.getItem('items'))
+  } else {
+    return []
+  }
+}
+
+
+const initialState = {
+ items: getLocalStorage () || [],
+ totalAmount: 0
+}
 
 export const CartContext = React.createContext({
  items: [],
@@ -7,11 +22,6 @@ export const CartContext = React.createContext({
  addItemToCart: () => {},
  removeItemFromCart: () => {}
 })
-
-const initialState = {
- items: [],
- totalAmount: 0
-}
 
 const reducer = (state, action) => {
  if (action.type === 'ADD') {
@@ -68,12 +78,13 @@ const CartContextProvider = ({ children }) => {
 
  const addItemToCart = (item) => {
   dispatch({ type: 'ADD', payload: item })
-  console.log(item)
  }
 
  const removeItemFromCart = (id) => {
   dispatch({ type: 'REMOVE', id: id })
  }
+
+
 
 
  const cartContext = {
@@ -83,7 +94,9 @@ const CartContextProvider = ({ children }) => {
   removeItemFromCart: removeItemFromCart
  }
 
-
+ useEffect(() => {
+  localStorage.setItem('items', JSON.stringify(state.items))
+ }, [state.items])
  return <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
 }
 
