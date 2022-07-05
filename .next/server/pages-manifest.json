@@ -2,5 +2,13 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/api/hello": "pages/api/hello.js",
+  "/cart": "pages/cart.html",
+  "/contact": "pages/contact.html",
+  "/": "pages/index.html",
+  "/our-story": "pages/our-story.html",
+  "/wishlist": "pages/wishlist.html",
+  "/products": "pages/products.js",
+  "/products/[slug]": "pages/products/[slug].js",
+  "/404": "pages/404.html"
 }

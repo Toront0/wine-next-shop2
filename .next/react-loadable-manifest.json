@@ -1,8 +1,28 @@
 {
-  "products\\index.js -> ../../src/sections/Products/Items": {
-    "id": "products\\index.js -> ../../src/sections/Products/Items",
+  "cart\\index.js -> ../../src/sections/Cart/Items": {
+    "id": 2992,
     "files": [
-      "static/chunks/src_sections_Products_Items_js.js"
+      "static/chunks/0c428ae2-d6ab934b88802111.js",
+      "static/chunks/675-b1c0bfa226b363b1.js",
+      "static/css/57e45cfce46dc3fe.css",
+      "static/chunks/992.66af4ee1f471cec2.js"
+    ]
+  },
+  "products\\index.js -> ../../src/sections/Products/Items": {
+    "id": 307,
+    "files": [
+      "static/chunks/675-b1c0bfa226b363b1.js",
+      "static/css/849b7496ab66182b.css",
+      "static/chunks/307.875da137ccee68d4.js"
+    ]
+  },
+  "wishlist\\index.js -> ../../src/sections/Wishlist/ListItems": {
+    "id": 7603,
+    "files": [
+      "static/chunks/0c428ae2-d6ab934b88802111.js",
+      "static/chunks/675-b1c0bfa226b363b1.js",
+      "static/css/c742995da680bc8c.css",
+      "static/chunks/603.9788a07c413ab248.js"
     ]
   }
 }
