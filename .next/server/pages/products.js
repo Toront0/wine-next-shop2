@@ -74,15 +74,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _src_components_NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1533);
-/* harmony import */ var _styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7901);
-/* harmony import */ var _styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7901);
+/* harmony import */ var _styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5152);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _src_sections_Products_ProductFilter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5682);
 /* harmony import */ var _src_utils_filter_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8336);
 /* harmony import */ var _src_utils_supabaseAdmin__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2764);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_src_components_NavBar__WEBPACK_IMPORTED_MODULE_2__]);
 _src_components_NavBar__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -106,9 +109,15 @@ const ProductsPage = ({ products  })=>{
     }, []);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_7___default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                    name: "description",
+                    content: "A lot of bottle of wines"
+                })
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_src_components_NavBar__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
-                className: (_styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_7___default().main),
+                className: (_styles_pages_Products_module_css__WEBPACK_IMPORTED_MODULE_8___default().main),
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_src_sections_Products_ProductFilter__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {}),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Items, {})
@@ -610,6 +619,14 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 "use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
 
 /***/ }),
 

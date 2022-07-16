@@ -69,13 +69,17 @@ const NavBar = ({ color }) => {
           }`}
         >
           <div className={styles.user}></div>
-          <Link href='/wishlist' passHref>
-            <button className={styles.heart}>
+          <Link href='/wishlist'>
+            <button
+              className={styles.heart}
+              type='button'
+              aria-label='add to favorites'
+            >
               <CgHeart />
             </button>
           </Link>
-          <Link href='/cart' passHref>
-            <button>
+          <Link href='/cart'>
+            <button type='button' aria-label='add to cart'>
               <AiOutlineShopping />
             </button>
           </Link>
