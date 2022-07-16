@@ -10,8 +10,6 @@ import img from '/public/images/wine.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import heroBg from '/public/images/hero-flowers.png'
-import Slider from 'react-slick'
-import { selectionData } from '../utils/constants'
 
 const HomeHero = () => {
   const settings = {
