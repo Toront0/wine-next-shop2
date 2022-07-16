@@ -22,7 +22,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1316:
+/***/ 4346:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -56,6 +56,12 @@ var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 
 
 const Footer = ()=>{
+    const onSubmit = (e)=>{
+        e.preventDefault();
+        const value = e.target.email.value;
+        console.log(value);
+        alert(`Your email: ${value}`);
+    };
     return /*#__PURE__*/ jsx_runtime_.jsx("footer", {
         className: (Footer_module_default()).footer,
         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -139,12 +145,15 @@ const Footer = ()=>{
                         }),
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("form", {
                             className: (Footer_module_default()).form,
+                            onSubmit: onSubmit,
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                    name: "email",
                                     type: "email",
                                     placeholder: "your@email.com"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                    type: "submit",
                                     children: "subscribe"
                                 })
                             ]
@@ -163,9 +172,9 @@ var wishlist_context = __webpack_require__(9733);
 var cart_context = __webpack_require__(8621);
 // EXTERNAL MODULE: ./src/utils/filter-context.js
 var filter_context = __webpack_require__(8336);
-;// CONCATENATED MODULE: external "next/head"
-const head_namespaceObject = require("next/head");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__(968);
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 ;// CONCATENATED MODULE: ./pages/_app.js
 
 
@@ -328,6 +337,14 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
+/***/ 968:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
+
+/***/ }),
+
 /***/ 6689:
 /***/ ((module) => {
 
@@ -367,7 +384,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [505,664,336,621,733], () => (__webpack_exec__(1316)));
+var __webpack_exports__ = __webpack_require__.X(0, [505,664,336,621,733], () => (__webpack_exec__(4346)));
 module.exports = __webpack_exports__;
 
 })();
